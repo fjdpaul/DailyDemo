@@ -15,7 +15,13 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.OvershootInterpolator;
 
 import comm.example.strugglefu.uitest.R;
-
+/**
+ * 创建时间: 2019/6/4 上午11:21
+ * 类描述: 多种自定义效果
+ *        旋转 缩放
+ *
+ * @author 香瓜
+ */
 public class TestSplashView extends View {
 
     //旋转圆的画笔

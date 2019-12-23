@@ -18,7 +18,7 @@ import comm.example.strugglefu.uitest.R;
 
 /**
  * 创建时间: 2019/6/2 上午11:33
- * 类描述:
+ * 类描述: 爆炸粒子
  *
  * @author 香瓜
  */

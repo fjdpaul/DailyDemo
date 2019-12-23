@@ -17,6 +17,12 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
 
+/**
+ * 创建时间: 2019/6/4 上午11:21
+ * 类描述: 图片混合模式
+ *
+ * @author 香瓜
+ */
 public class XfermodesView extends View {
 
 

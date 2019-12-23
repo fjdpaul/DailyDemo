@@ -14,7 +14,8 @@ import android.view.View;
 import comm.example.strugglefu.uitest.R;
 /**
  * 创建时间: 2019/6/4 上午11:21
- * 类描述:
+ * 类描述: 模仿某app刷新 机理一致
+
  *
  * @author 香瓜
  */
@@ -49,57 +50,6 @@ public class PathMeasureView extends View {
 
         canvas.translate(getWidth() / 2, getHeight() / 2);
 
-//        Path path = new Path();
-//        path.lineTo(0,200);
-//        path.lineTo(200,200);
-//        path.lineTo(200,0);
-//
-//        /**
-//         * pathMeasure需要关联一个创建好的path, forceClosed会影响Path的测量结果
-//         */
-//        PathMeasure pathMeasure = new PathMeasure();
-//        pathMeasure.setPath(path, true);
-//        Log.e("TAG", "onDraw:forceClosed=true "+ pathMeasure.getLength());
-//
-//        PathMeasure pathMeasure2 = new PathMeasure();
-//        pathMeasure2.setPath(path, false);
-//        Log.e("TAG", "onDraw:forceClosed=false "+ pathMeasure2.getLength());
-//
-//        PathMeasure pathMeasure1 = new PathMeasure(path, false);
-//        Log.e("TAG", "onDraw:PathMeasure(path, false) "+ pathMeasure1.getLength());
-//
-//        path.lineTo(200, -200);
-//
-//        Log.e("TAG", "onDraw:PathMeasure(path, false) "+ pathMeasure1.getLength());
-//        //如果Path进行了调整，需要重新调用setPath方法进行关联
-//        pathMeasure1.setPath(path, false);
-//
-//        Log.e("TAG", "onDraw:PathMeasure(path, false) "+ pathMeasure1.getLength());
-
-//        Path path = new Path();
-//        path.addRect(-200,-200, 200,200, Path.Direction.CW);
-//
-//        Path dst = new Path();
-//        dst.lineTo(-300,-300);//添加一条直线
-//
-//        PathMeasure pathMeasure = new PathMeasure(path, false);
-//        //截取一部分存入dst中，并且使用moveTo保持截取得到的Path第一个点位置不变。
-//        pathMeasure.getSegment(200, 1000, dst, true);
-//
-//
-//
-//        canvas.drawPath(path, mPaint);
-//        canvas.drawPath(dst, mLinePaint);
-
-//        Path path = new Path();
-//        path.addRect(-100,-100,100,100, Path.Direction.CW);//添加一个矩形
-//        path.addOval(-200,-200,200,200, Path.Direction.CW);//添加一个椭圆
-//        canvas.drawPath(path, mPaint);
-//        PathMeasure pathMeasure = new PathMeasure(path, false);
-//        Log.e("TAG", "onDraw:forceClosed=false "+ pathMeasure.getLength());
-//        //跳转到下一条曲线
-//        pathMeasure.nextContour();
-//        Log.e("TAG", "onDraw:forceClosed=false "+ pathMeasure.getLength());
 
         mPath.reset();
         mPath.addRect(-200,-200,200, 200,Path.Direction.CW);
@@ -109,22 +59,6 @@ public class PathMeasureView extends View {
         if (mFloat >= 1){
             mFloat = 0;
         }
-
-//        PathMeasure pathMeasure = new PathMeasure(mPath, false);
-//        pathMeasure.getPosTan(pathMeasure.getLength() * mFloat,pos,tan);
-//        Log.e("TAG", "onDraw: pos[0]="+pos[0]+";pos[1]="+pos[1]);
-//        Log.e("TAG", "onDraw: tan[0]="+tan[0]+";tan[1]="+tan[1]);
-//
-//        //计算出当前的切线与x轴夹角的度数
-//        double degrees = Math.atan2(tan[1], tan[0]) * 180.0 / Math.PI;
-//        Log.e("TAG", "onDraw: degrees="+degrees);
-//
-//        mMatrix.reset();
-//        //进行角度旋转
-//        mMatrix.postRotate((float) degrees, mBitmap.getWidth() / 2, mBitmap.getHeight() / 2);
-//        //将图片的绘制点中心与当前点重合
-//        mMatrix.postTranslate(pos[0] - mBitmap.getWidth() / 2, pos[1]-mBitmap.getHeight() / 2);
-//        canvas.drawBitmap(mBitmap,mMatrix, mPaint);
 
         PathMeasure pathMeasure = new PathMeasure(mPath, false);
         //将pos信息和tan信息保存在mMatrix中
