@@ -11,6 +11,8 @@
     <color name="blue">#00C6FF</color>
     <color name="green">#00E099</color>
     <color name="pink">#FF3892</color>
+    <color name="red">#D36B6B</color>
+    <color name="normal_red">#33D36B6B</color>
 
     <array name="splash_circle_colors">
         <item>@color/blue</item>
