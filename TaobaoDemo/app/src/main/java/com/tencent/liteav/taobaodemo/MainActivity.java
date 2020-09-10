@@ -11,25 +11,22 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
     private View view;
     private TabView tabView;
+    private ScaleView scaleView;
+
+    private int[] resIds = {
+            R.drawable.ic_test_one,
+            R.drawable.ic_test_two,
+            R.drawable.ic_test_three,
+            R.drawable.ic_test_four,
+            R.drawable.ic_test_five
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        view = this.findViewById(R.id.container);
-//        tabView = this.findViewById(R.id.tabView);
-//        tabView.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                view.performClick();
-//                return false;
-//            }
-//        });
-//        view.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                tabView.switchTab();
-//            }
-//        });
+        scaleView = this.findViewById(R.id.scale_container);
+        scaleView.setImgs(resIds);
+        scaleView.start();
     }
 }

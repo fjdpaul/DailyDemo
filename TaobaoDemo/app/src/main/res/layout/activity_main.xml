@@ -10,7 +10,7 @@
     android:foreground="?android:attr/selectableItemBackground">
 
     <com.tencent.liteav.taobaodemo.ScaleView
-        android:id="@+id/tabView"
+        android:id="@+id/scale_container"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
